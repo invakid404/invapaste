@@ -17,6 +17,6 @@ export class PastesService {
   }
 
   async findById(id: string): Promise<Paste> {
-    return this.pasteModel.findById(id);
+    return this.pasteModel.findById(id).lean();
   }
 }
