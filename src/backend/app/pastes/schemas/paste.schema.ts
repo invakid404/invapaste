@@ -1,10 +1,11 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
+import { Types, Document } from 'mongoose';
+import { BaseSchema } from '../../lib/mongoose/base.schema';
 
 export type PasteDocument = Paste & Document;
 
 @Schema()
-export class Paste {
+export class Paste extends BaseSchema {
   @Prop()
   content: string;
 }
