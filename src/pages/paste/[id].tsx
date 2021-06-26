@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import { usePaste } from 'src/lib/hooks/usePaste';
 import Error from 'next/error';
 import { BeatLoader } from 'react-spinners';
