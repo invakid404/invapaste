@@ -8,7 +8,7 @@ export const usePaste = (id: string | string[]) => {
       return;
     }
 
-    fetch(`/api/paste/${id.toString()}`)
+    fetch(`/api/paste/${encodeURIComponent(id.toString())}`)
       .then((response) => response.json())
       .then(({ content }) => setContent(content));
   }, [id]);
