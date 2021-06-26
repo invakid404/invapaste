@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router';
-import { usePaste } from 'src/lib/hooks/usePaste';
 import Error from 'next/error';
+import { useRouter } from 'next/router';
 import { BeatLoader } from 'react-spinners';
+import { usePaste } from 'src/lib/hooks/usePaste';
 
 const Paste = () => {
   const router = useRouter();

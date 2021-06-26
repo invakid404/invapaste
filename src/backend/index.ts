@@ -1,9 +1,9 @@
-import 'reflect-metadata';
+import { INestApplication } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app/app.module';
 import * as http from 'http';
 import { NextApiHandler } from 'next';
-import { INestApplication } from '@nestjs/common';
+
+import { AppModule } from './app/app.module';
 
 export module Backend {
   let app: INestApplication;

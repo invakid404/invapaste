@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
+
 import { PastesController } from './pastes.controller';
 import { PastesService } from './pastes.service';
-import { PasteSchema, PasteCollection } from './schemas/paste.schema';
+import { PasteCollection, PasteSchema } from './schemas/paste.schema';
 
 @Module({
   imports: [
