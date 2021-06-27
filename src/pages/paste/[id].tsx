@@ -1,7 +1,12 @@
+import 'jetbrains-mono';
+
 import Error from 'next/error';
 import { useRouter } from 'next/router';
+import Highlight from 'react-highlight.js';
 import { BeatLoader } from 'react-spinners';
 import { usePaste } from 'src/lib/hooks/usePaste';
+
+import styles from './paste.module.css';
 
 const Paste = () => {
   const router = useRouter();
@@ -16,7 +21,7 @@ const Paste = () => {
     return <BeatLoader />;
   }
 
-  return <p>{data.content}</p>;
+  return <Highlight className={styles.pre}>{data.content}</Highlight>;
 };
 
 export default Paste;
