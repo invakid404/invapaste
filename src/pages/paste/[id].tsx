@@ -2,8 +2,9 @@ import 'jetbrains-mono';
 
 import Error from 'next/error';
 import { useRouter } from 'next/router';
-import Highlight from 'react-highlight.js';
 import { BeatLoader } from 'react-spinners';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 import { usePaste } from 'src/lib/hooks/usePaste';
 
 import styles from './paste.module.css';
@@ -21,7 +22,15 @@ const Paste = () => {
     return <BeatLoader />;
   }
 
-  return <Highlight className={styles.pre}>{data.content}</Highlight>;
+  return (
+    <SyntaxHighlighter
+      showLineNumbers={true}
+      className={styles.pre}
+      style={atomOneDark}
+    >
+      {data.content}
+    </SyntaxHighlighter>
+  );
 };
 
 export default Paste;
