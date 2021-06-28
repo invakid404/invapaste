@@ -23,6 +23,4 @@ COPY --from=builder /invapaste/.next ./.next
 COPY --from=builder /invapaste/node_modules ./node_modules
 COPY --from=builder /invapaste/package.json ./package.json
 
-EXPOSE 3000
-
 CMD ["yarn", "start"]
