@@ -8,7 +8,7 @@ services:
     restart: always
 
   app:
-    build: .
+    image: ghcr.io/invakid404/invapaste:latest
     ports:
       - 3000:3000
     environment:
