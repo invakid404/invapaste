@@ -25,6 +25,7 @@ const Paste = () => {
   return (
     <SyntaxHighlighter
       showLineNumbers={true}
+      wrapLongLines={true}
       className={styles.pre}
       style={atomOneDark}
     >
