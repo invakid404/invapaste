@@ -1,5 +1,6 @@
 import 'jetbrains-mono';
 
+import copy from 'copy-to-clipboard';
 import Error from 'next/error';
 import { useRouter } from 'next/router';
 import { BeatLoader } from 'react-spinners';
@@ -28,6 +29,12 @@ const Paste = () => {
       wrapLongLines={true}
       className={styles.pre}
       style={atomOneDark}
+      onCopy={(event) => {
+        event.preventDefault();
+        event.nativeEvent.stopImmediatePropagation();
+
+        copy(data.content);
+      }}
     >
       {data.content}
     </SyntaxHighlighter>
