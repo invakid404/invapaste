@@ -3,6 +3,7 @@ import 'jetbrains-mono';
 import copy from 'copy-to-clipboard';
 import Error from 'next/error';
 import { useRouter } from 'next/router';
+import { SyntheticEvent } from 'react';
 import { BeatLoader } from 'react-spinners';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
@@ -29,7 +30,7 @@ const Paste = () => {
       wrapLongLines={true}
       className={styles.pre}
       style={atomOneDark}
-      onCopy={(event) => {
+      onCopy={(event: SyntheticEvent) => {
         event.preventDefault();
         event.nativeEvent.stopImmediatePropagation();
 
