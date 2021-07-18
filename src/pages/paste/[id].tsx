@@ -1,5 +1,3 @@
-import 'jetbrains-mono';
-
 import { PasteContent } from '@lib/components';
 import { usePaste } from '@lib/hooks';
 import copy from 'copy-to-clipboard';

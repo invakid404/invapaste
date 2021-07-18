@@ -1,4 +1,5 @@
 import 'highlight.js/styles/dracula.css';
+import 'jetbrains-mono';
 
 import Head from 'next/head';
 import resetercss from 'node_modules/reseter.css/src/styled-components/ts/reseter';
