@@ -27,6 +27,7 @@ const Paste = () => {
       showLineNumbers={true}
       wrapLongLines={true}
       style={atomOneDark}
+      font="JetBrains Mono"
       onCopy={(event: SyntheticEvent) => {
         event.preventDefault();
         event.nativeEvent.stopImmediatePropagation();
