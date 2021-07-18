@@ -1,15 +1,13 @@
 import 'jetbrains-mono';
 
+import { PasteContent } from '@lib/components';
+import { usePaste } from '@lib/hooks';
 import copy from 'copy-to-clipboard';
 import Error from 'next/error';
 import { useRouter } from 'next/router';
 import { SyntheticEvent } from 'react';
 import { BeatLoader } from 'react-spinners';
-import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import { usePaste } from 'src/lib/hooks/usePaste';
-
-import styles from './paste.module.css';
 
 const Paste = () => {
   const router = useRouter();
@@ -25,10 +23,9 @@ const Paste = () => {
   }
 
   return (
-    <SyntaxHighlighter
+    <PasteContent
       showLineNumbers={true}
       wrapLongLines={true}
-      className={styles.pre}
       style={atomOneDark}
       onCopy={(event: SyntheticEvent) => {
         event.preventDefault();
@@ -38,7 +35,7 @@ const Paste = () => {
       }}
     >
       {data.content}
-    </SyntaxHighlighter>
+    </PasteContent>
   );
 };
 

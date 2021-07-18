@@ -17,6 +17,8 @@
     "emitDecoratorMetadata": true,
     "baseUrl": "./",
     "paths": {
+      "@lib": ["src/lib"],
+      "@lib/*": ["src/lib/*"],
       "@backend": ["src/backend"]
     }
   },
