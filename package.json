@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
-    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.15.4",
     "@types/node": "^16.7.6",
     "@types/react": "^17.0.20",
     "@types/react-syntax-highlighter": "^13.5.2",
