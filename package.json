@@ -23,7 +23,7 @@
     "reseter.css": "^2.0.0",
     "rxjs": "^6.5.5",
     "styled-components": "^5.3.1",
-    "swr": "^1.0.0"
+    "swr": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
